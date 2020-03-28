@@ -4,7 +4,9 @@ int gcd(int,int);
 
 int gcd(int num1, int num2)
 {
-  for (int divisor = num2; divisor >= 1; divisor--)
+  int min = num1 < num2 ? num1 : num2;
+
+  for (int divisor = min; divisor >= 1; divisor--)
   {
     if(num1 % divisor == 0 && num2 % divisor == 0)
     {
