@@ -7,7 +7,7 @@ float calculate_simple_interest(float p, float t, float r)
   return ((p * t * r) / 100);
 }
 
-float main(void)
+int main(void)
 {
   float p,t,r;
 
