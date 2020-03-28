@@ -1,24 +1,24 @@
 #include <stdio.h>
 
-int calculate_simple_interest(int, int, int);
+float calculate_simple_interest(float, float, float);
 
-int calculate_simple_interest(int p, int t, int r)
+float calculate_simple_interest(float p, float t, float r)
 {
   return ((p * t * r) / 100);
 }
 
-int main(void)
+float main(void)
 {
-  int p,t,r;
+  float p,t,r;
 
   printf("Enter the Principle amount:\n");
-  scanf("%d", &p);
+  scanf("%f", &p);
   printf("Enter the interst rate:\n");
-  scanf("%d", &t);
+  scanf("%f", &t);
   printf("Enter the period:\n");
-  scanf("%d", &r);
+  scanf("%f", &r);
 
-  printf("Simple interest for the given data is %d\n", calculate_simple_interest(p, t, r));
+  printf("Simple interest for the given data is %f\n", calculate_simple_interest(p, t, r));
 
 
   return 0;
