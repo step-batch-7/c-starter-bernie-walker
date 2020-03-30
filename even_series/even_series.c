@@ -2,14 +2,14 @@
 
 #include <stdio.h>
 
-int print_odd_series(int);
+int print_even_series(int);
 
-int print_odd_series(int num)
+int print_even_series(int num)
 {
 
   for(unsigned int i = 1; i < num; i++)
   {
-    if((i & 1) == 1)
+    if((i & 1) == 0)
     {
       printf("%u\n", i);
     }
@@ -23,8 +23,8 @@ int main(void)
   int a; 
   printf("Enter a number:\n");
   scanf("%d", &a);
-  printf("Odd number series:\n");
-  print_odd_series(a);
+  printf("Even number series:\n");
+  print_even_series(a);
   return 0;  
 }
 
