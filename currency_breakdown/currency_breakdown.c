@@ -3,27 +3,15 @@
 int main(void)
 {
   unsigned int amount;
-  int denom;
-
-  int a = 1;
-  int b = 2;
-  int c = 10;
-  int d = 50;
-  int e = 100;
-  int f = 200;
-  int g = 500;
-  int h = 2000;
-  int *denom_ptr = &h;
+  int denom[] = {2000, 500, 200, 100, 50, 10, 5, 1};
 
   printf("Enter the amount:\n");
   scanf("%u", &amount);
 
-  while(amount > 0)
+  for(int i = 0; i < 8; i++)
   {
-    denom = *denom_ptr;
-    printf("Rs %d x %d\n", denom, (amount / denom));
-    amount = amount % denom;
-    ++denom_ptr;
+    printf("Rs %d x %d\n", denom[i], (amount / denom[i]));
+    amount = amount % denom[i];
   }
 
   return 0;
