@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-char isSpecial(int);
+char is_special(int);
 
-char isSpecial(int num)
+char is_special(int num)
 {
   return (num < 100 && num >= 90 && num != 97) ? 1 : 0;
 }
@@ -12,7 +12,7 @@ int modify_char(int);
 int modify_char(int num)
 {
   int result = num + 13;
-  return result >= 123 || isSpecial(result) == 1 ? result - 26 : result;
+  return result >= 123 || is_special(result) == 1 ? result - 26 : result;
 }
 
 int main()
